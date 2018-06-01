@@ -47,9 +47,17 @@ if ($p) {
 
 $course = $DB->get_record('course', array('id'=>$cm->course), '*', MUST_EXIST);
 
-require_course_login($course, true, $cm);
+
+/* commenting out below code to enable no login while viewing course by any user */
+#require_course_login($course, true, $cm);
+#$context = context_module::instance($cm->id);
+#require_capability('mod/page:view', $context);
+
 $context = context_module::instance($cm->id);
+//assign_capability('mod/page:view',CAP_ALLOW,7, $context->id,true);
+$PAGE->set_cm($cm);
 require_capability('mod/page:view', $context);
+
 
 // Completion and trigger events.
 page_view($page, $course, $cm, $context);

@@ -55,7 +55,8 @@
         role_switch($switchrole, $context);
     }
 
-    require_login($course);
+    /* commenting out require_login to not to show login prompt while accessing course */
+    //require_login($course);
 
     // Switchrole - sanity check in cost-order...
     $reset_user_allowed_editing = false;
