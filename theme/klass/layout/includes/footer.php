@@ -21,7 +21,7 @@ $infolink = theme_klass_get_setting('infolink');
           <div class="infoarea">
             <div class="footer-logo">
               <a href="<?php echo $CFG->wwwroot;?>">
-              	<img src="<?php echo get_logo_url('footer'); ?>" width="183" height="80" alt="Klass">
+              <!--	<img src="<?php echo get_logo_url('footer'); ?>" width="183" height="80" alt="Klass"> -->
               </a>
             </div>
             <?php echo $footnote; ?>
