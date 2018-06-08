@@ -44,7 +44,10 @@ $surl = new moodle_url('/course/search.php');
             <a href="#" class="brand" style="display: none;">Title</a>
             <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('home','theme_klass');?></a></p>
             <div class="nav-collapse collapse navbar-responsive-collapse">
-              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('home','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo ucwords(get_string('home','theme_klass'));?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('feedback','theme_klass').ucwords();?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('ias_myths','theme_klass').ucwords();?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('about','theme_klass');?></a></p>
               <?php echo $OUTPUT->custom_menu(); ?>
               <ul class="nav pull-right">
                   <li><?php echo $OUTPUT->page_heading_menu(); ?></li>

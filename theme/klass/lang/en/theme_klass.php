@@ -209,3 +209,5 @@ $string['phone'] = "Phone";
 $string['email'] = "E-mail";
 $string['get_social'] = "Get Social";
 $string['home'] = "Home";
+$string['feedback'] = "Feedback";
+$string['ias_myths'] = "IAS Myths";

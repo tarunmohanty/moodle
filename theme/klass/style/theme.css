@@ -1,4 +1,4 @@
-/*
+*
  * @author    LMSACE Dev Team, lmsace.com
  * @package   theme_klass
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -176,7 +176,7 @@ h6 {
 #header .header-main .header-main-menubar .navbar-text a {
 		font-family: arvoregular, Arial, Helvetica, sans-serif;
 		color: #232323;
-		text-transform: uppercase;
+		text-transform: None;
 }
 #header .header-main .header-main-menubar .navbar-text a:hover,
 #header .header-main .header-main-menubar .navbar-text a:focus {
