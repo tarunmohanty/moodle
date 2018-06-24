@@ -45,9 +45,16 @@ $surl = new moodle_url('/course/search.php');
             <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('home','theme_klass');?></a></p>
             <div class="nav-collapse collapse navbar-responsive-collapse">
               <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo ucwords(get_string('home','theme_klass'));?></a></p>
-              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('feedback','theme_klass').ucwords();?></a></p>
-              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('ias_myths','theme_klass').ucwords();?></a></p>
-              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot;?>"><i class="fa fa-home"></i><?php echo get_string('about','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/feedback.php';?>"><i class="fa fa-home"></i><?php echo get_string('feedback','theme_klass').ucwords();?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/iasmyths.php';?>"><i class="fa fa-home"></i><?php echo get_string('ias_myths','theme_klass').ucwords();?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/about.php';?>"><i class="fa fa-home"></i><?php echo get_string('about','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/ias-guide.php';?>"><i class="fa fa-home"></i><?php echo get_string('ias_guide','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/daily-current-affairs.php';?>"><i class="fa fa-home"></i><?php echo get_string('daily_current_affairs','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/articles.php';?>"><i class="fa fa-home"></i><?php echo get_string('articles','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/downloads.php';?>"><i class="fa fa-home"></i><?php echo get_string('downloads','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/latest-posts.php';?>"><i class="fa fa-home"></i><?php echo get_string('latest_posts','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/answer-writing-challenges.php';?>"><i class="fa fa-home"></i><?php echo get_string('answer_writing_challenges','theme_klass');?></a></p>
+              <p class="navbar-text"><a href="<?php echo $CFG->wwwroot.'/toppers.php';?>"><i class="fa fa-home"></i><?php echo get_string('toppers','theme_klass');?></a></p>
               <?php echo $OUTPUT->custom_menu(); ?>
               <ul class="nav pull-right">
                   <li><?php echo $OUTPUT->page_heading_menu(); ?></li>

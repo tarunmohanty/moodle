@@ -176,6 +176,7 @@ h6 {
 #header .header-main .header-main-menubar .navbar-text a {
 		font-family: arvoregular, Arial, Helvetica, sans-serif;
 		color: #232323;
+		font-size: 15px;
 		text-transform: None;
 }
 #header .header-main .header-main-menubar .navbar-text a:hover,
