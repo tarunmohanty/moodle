@@ -129,6 +129,7 @@ class theme_klass_core_course_renderer extends core_course_renderer {
         $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_EXPANDED)->
         set_courses_display_options(array(
         'recursive' => true,
+	'coursefrontpage' => true,
         'limit' => $CFG->frontpagecourselimit,
         'viewmoreurl' => new moodle_url('/course/index.php'),
         'viewmoretext' => new lang_string('fulllistofcourses')));
