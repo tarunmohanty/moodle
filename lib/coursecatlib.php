@@ -1471,6 +1471,7 @@ class coursecat implements renderable, cacheable_object, IteratorAggregate {
     public function get_courses($options = array()) {
         global $DB;
         $recursive = !empty($options['recursive']);
+        $frontpage = !empty($options['coursefrontpage']);
         $offset = !empty($options['offset']) ? $options['offset'] : 0;
         $limit = !empty($options['limit']) ? $options['limit'] : null;
         $sortfields = !empty($options['sort']) ? $options['sort'] : array('sortorder' => 1);
@@ -1494,7 +1495,12 @@ class coursecat implements renderable, cacheable_object, IteratorAggregate {
             $courses = array();
             if (!empty($ids)) {
                 list($sql, $params) = $DB->get_in_or_equal($ids, SQL_PARAMS_NAMED, 'id');
+		if (!empty($frontpage)){
+                $records = self::get_course_records("c.id ". $sql." and c.idnumber not like 'quiz'", $params, $options);
+		}
+		else{
                 $records = self::get_course_records("c.id ". $sql, $params, $options);
+		}
                 // Preload course contacts if necessary - saves DB queries later to do it for each course separately.
                 if (!empty($options['coursecontacts'])) {
                     self::preload_course_contacts($records);
@@ -1505,7 +1511,9 @@ class coursecat implements renderable, cacheable_object, IteratorAggregate {
                 }
                 // Prepare the list of course_in_list objects.
                 foreach ($ids as $id) {
+                    if(!empty($records[$id])){
                     $courses[$id] = new course_in_list($records[$id]);
+		    }
                 }
             }
             return $courses;
